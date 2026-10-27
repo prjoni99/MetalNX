@@ -725,7 +725,7 @@ def main():
             "--with", "lz4",
             "--with", "capstone",
             "--with", "fonttools",
-            "--with", "zstandard",
+            "--with", "backports.zstd",   # zstd for Python before 3.14 (build_ipa_from_nsp.py imports backports.zstd)
             "python",
             str(build_script),
             str(nsp_dir),
